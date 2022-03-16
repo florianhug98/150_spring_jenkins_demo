@@ -41,7 +41,7 @@
                 <version>3.2.0</version>
                 <configuration>
                     <from>
-                        nexus.florian-hug.ch/repository/docker-repo/openjdk:17
+                        <image>nexus.florian-hug.ch/repository/docker-repo/openjdk:17</image>
                     </from>
                     <to>
                         <image>nexus.florian-hug.ch/repository/docker-repo/spring-jenkins-demo:${version}</image>
