@@ -34,6 +34,22 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+
+            <plugin>
+                <groupId>com.google.cloud.tools</groupId>
+                <artifactId>jib-maven-plugin</artifactId>
+                <version>3.2.0</version>
+                <configuration>
+                    <to>
+                        <image>https://nexus.florian-hug.ch/repository/ch.bs.hug.docker/spring-jenkins-demo:${version}</image>
+                    </to>
+                    <container>
+                        <ports>
+                            <port>9900</port>
+                        </ports>
+                    </container>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 
