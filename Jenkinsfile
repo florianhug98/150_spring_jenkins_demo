@@ -1,4 +1,6 @@
 @Library("150-shared-library") _
+import ch.bs.hug.Constants
+
 pipeline {
   agent {
     docker { image 'maven:3.8.4-openjdk-17' }
@@ -7,6 +9,7 @@ pipeline {
   stages {
     stage('init') {
       steps {
+        echo 'Currently in branch: ' + env.BRANCH_NAME
         sh 'java --version'
         sh 'mvn -v'
       }
@@ -29,7 +32,13 @@ pipeline {
             branch "master"
         }
         steps {
-          deployToNexus()
+          deployToNexus(
+            nexusVersion: Constants.NEXUS_VERSION,
+            nexusProtocol: Constants.NEXUS_PROTOCOL,
+            nexusUrl: Constants.NEXUS_URL,
+            nexusRepository: Constants.NEXUS_REPOSITORY,
+            nexusCredentialsId: Constants.NEXUS_CREDENTIALS_ID
+          )
         }
     }
   }
