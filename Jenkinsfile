@@ -41,5 +41,14 @@ pipeline {
           )
         }
     }
+    
+    stage ("dockerize") {
+      when {
+        branch "master"
+      }
+      steps {
+        sh "mvn jib:build"
+      }
+    }
   }
 }
