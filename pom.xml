@@ -40,8 +40,11 @@
                 <artifactId>jib-maven-plugin</artifactId>
                 <version>3.2.0</version>
                 <configuration>
+                    <from>
+                        nexus.florian-hug.ch/repository/docker-repo/openjdk:17
+                    </from>
                     <to>
-                        <image>nexus.florian-hug.ch/repository/ch.bs.hug.docker/spring-jenkins-demo:${version}</image>
+                        <image>nexus.florian-hug.ch/repository/docker-repo/spring-jenkins-demo:${version}</image>
                     </to>
                     <container>
                         <ports>
