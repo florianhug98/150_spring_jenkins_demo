@@ -9,7 +9,7 @@
     </parent>
     <groupId>ch.bs.hug</groupId>
     <artifactId>spring-jenkins-demo</artifactId>
-    <version>0.2</version>
+    <version>0.3</version>
     <name>spring-jenkins-demo</name>
 
     <properties>
@@ -48,7 +48,7 @@
                     </to>
                     <container>
                         <ports>
-                            <port>9900</port>
+                            <port>9901</port>
                         </ports>
                     </container>
                 </configuration>
