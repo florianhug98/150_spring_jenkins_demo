@@ -41,7 +41,7 @@
                 <version>3.2.0</version>
                 <configuration>
                     <from>
-                        <image>arm64v8/openjdk:17-slim/</image>
+                        <image>registry.hub.docker.com/library/arm64v8/openjdk:17-slim/</image>
                     </from>
                     <to>
                         <image>nexus.florian-hug.ch/repository/docker-repo/spring-jenkins-demo:${version}</image>
