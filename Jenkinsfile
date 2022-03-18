@@ -1,6 +1,8 @@
 @Library("150-shared-library") _
 import ch.bs.hug.Constants
 
+def CONTAINER_NAME = "spring-jenkins-demo-arm"
+
 pipeline {
   agent {
     docker { image 'maven:3.8.4-openjdk-17' }
@@ -56,6 +58,8 @@ pipeline {
         branch "master"
       }
       steps {
+        pom = readMavenPom file: "pom.xml"
+        echo ${CONTAINER_NAME} + ':' + ${pom.version}
         deployToStage()
       }
     }
