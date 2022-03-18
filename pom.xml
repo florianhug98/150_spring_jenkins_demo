@@ -8,12 +8,12 @@
         <version>2.6.4</version>
     </parent>
     <groupId>ch.bs.hug</groupId>
-    <artifactId>spring-jenkins-demo</artifactId>
-    <version>0.1</version>
-    <name>spring-jenkins-demo</name>
+    <artifactId>spring-jenkins-demo-arm</artifactId>
+    <version>0.2</version>
 
     <properties>
         <java.version>17</java.version>
+        <docker-base-url>nexus.florian-hug.ch/repository/docker-repo</docker-base-url>
     </properties>
     <dependencies>
         <dependency>
@@ -41,10 +41,10 @@
                 <version>3.2.0</version>
                 <configuration>
                     <from>
-                        <image>nexus.florian-hug.ch/repository/docker-repo/openjdk-17-slim-arm</image>
+                        <image>${docker-base-url}/openjdk-17-slim-arm</image>
                     </from>
                     <to>
-                        <image>nexus.florian-hug.ch/repository/docker-repo/spring-jenkins-demo:${version}</image>
+                        <image>${docker-base-url}/${artifactId}:${version}</image>
                     </to>
                     <container>
                         <ports>
