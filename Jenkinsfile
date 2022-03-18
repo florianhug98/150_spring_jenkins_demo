@@ -50,5 +50,14 @@ pipeline {
         sh "mvn jib:build"
       }
     }
+    
+    stage ("server deploy"){
+      when {
+        branch "master"
+      }
+      steps {
+        deploToStage()
+      }
+    }
   }
 }
