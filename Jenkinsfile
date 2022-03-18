@@ -59,8 +59,7 @@ pipeline {
       }
       steps {
         deployToStage(
-          imageName: "${CONTAINER_NAME}",
-          imageTag: "${pom.version}"
+          imageName: "${CONTAINER_NAME}"
         )
       }
     }
