@@ -58,8 +58,10 @@ pipeline {
         branch "master"
       }
       steps {
-        pom = readMavenPom file: "pom.xml"
-        echo "${CONTAINER_NAME}:${pom.version}"
+        script {
+          pom = readMavenPom file: "pom.xml"
+          echo "${CONTAINER_NAME}:${pom.version}"
+        }
         deployToStage()
       }
     }
