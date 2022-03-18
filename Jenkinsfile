@@ -56,7 +56,7 @@ pipeline {
         branch "master"
       }
       steps {
-        deploToStage()
+        deployToStage()
       }
     }
   }
