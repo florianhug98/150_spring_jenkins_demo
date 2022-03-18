@@ -59,7 +59,7 @@ pipeline {
       }
       steps {
         pom = readMavenPom file: "pom.xml"
-        echo ${CONTAINER_NAME} + ':' + ${pom.version}
+        echo "${CONTAINER_NAME}:${pom.version}"
         deployToStage()
       }
     }
