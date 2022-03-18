@@ -35,7 +35,7 @@ pipeline {
           deployToNexus(
             nexusVersion: Constants.NEXUS_VERSION,
             nexusProtocol: Constants.NEXUS_PROTOCOL,
-            nexusUrl: ${env.NEXUS_URL},
+            nexusUrl: '${env.NEXUS_URL}',
             nexusRepository: Constants.NEXUS_REPOSITORY,
             nexusCredentialsId: Constants.NEXUS_CREDENTIALS_ID
           )
